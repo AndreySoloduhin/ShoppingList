@@ -1,10 +1,9 @@
 package com.example.shoppinglist.domain
 
-import android.adservices.adid.AdId
 
-class DeleteShopItem {
+class DeleteShopItem(private val shopListRepository: ShopListRepository) {
 
     fun deleteShopItem(shopItem: ShopItem) {
-
+        shopListRepository.deleteShopItem(shopItem)
     }
 }
